@@ -22,7 +22,7 @@ module EmbedMedia
       elsif str = url.match(/https:\/\/vine\.co\/v\/([^\/]*)/)
         # Vine
         code = vine_embed(str[1], html_options)
-      elsif str = url.match(/https:\/\/www\.nicovideo\.jp\/watch\/([sm|nm|so][0-9]+)/)
+      elsif str = url.match(/https:\/\/www\.nicovideo\.jp\/watch\/([sm|nm|so]?[0-9]+)/)
         # Niconico
         code = niconico_embed(str[1], html_options)
       else
