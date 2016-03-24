@@ -1,6 +1,7 @@
 EmbedMedia
 ----
 [![GitHub license](https://img.shields.io/github/license/fuyuno/embed_media.svg?style=flat-square)](LICENSE)
+[![Gem](https://img.shields.io/gem/v/embed_media.svg?style=flat-square)](https://rubygems.org/gems/embed_media)
 
 This gem provide helper method for embed media.  
 Support embedded medias are:
