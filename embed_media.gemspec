@@ -6,7 +6,7 @@ require 'embed_media/version'
 Gem::Specification.new do |spec|
   spec.name          = "embed_media"
   spec.version       = EmbedMedia::VERSION
-  spec.authors       = ["Mikazuki Fuyuno"]
+  spec.authors       = ["Mikazuki"]
   spec.email         = ["mikazuki_fuyuno@outlook.com"]
 
   spec.summary       = %q{Embedded Medias as YouTube, Vimeo and Niconico from URL.}
@@ -18,6 +18,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_dependency "rails", "~> 4.0"
 
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"

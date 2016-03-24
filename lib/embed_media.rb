@@ -1,5 +1,5 @@
 require "embed_media/version"
+require "embed_media/engine"
 
 module EmbedMedia
-  # Your code goes here...
 end
