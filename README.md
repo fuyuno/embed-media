@@ -1,8 +1,14 @@
-# EmbedMedia
+EmbedMedia
+----
+[![GitHub license](https://img.shields.io/github/license/fuyuno/embed_media.svg?style=flat-square)](LICENSE)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/embed_media`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem provide helper method for embed media.  
+Support embedded medias are:
 
-TODO: Delete this and the text above, and describe your gem
+* YouTube (Video)
+* Vimeo (Video)
+* Vine (Video)
+* Niconico (Video Info)
 
 ## Installation
 
@@ -22,7 +28,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+#### Basic usage
+```haml
+-# contents
+= media("https://www.youtube.com/watch?v=kfvxmEuC7bU")
+```
+
+#### Options
+```haml
+-# contents
+= media("https://www.youtube.com/watch?v=kfvxmEuC7bU", width: 520, height: 200)
+```
 
 ## Development
 
@@ -32,5 +48,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/embed_media.
+Bug reports and pull requests are welcome on GitHub at https://github.com/fuyuno]/embed_media.
 
