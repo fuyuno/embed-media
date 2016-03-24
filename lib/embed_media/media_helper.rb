@@ -12,7 +12,7 @@ module EmbedMedia
     end
 
     private
-    def generate_code url
+    def generate_code(url, html_options)
       if    str = url.match(/https:\/\/www\.youtube\.com\/watch\?v=([^&]+)/)
         # YouTube
         code = youtube_embed(str[1], html_options) 
@@ -31,10 +31,10 @@ module EmbedMedia
       code
     end
 
-    def youtube_embed video_id, html_options
+    def youtube_embed(video_id, html_options)
       html_options["src"] = "https://www.youtube.com/embed/#{video_id}"
       html_options["frameborder"] = 0
-      html_options["allowfullscreen"] = true
+      html_options["allowfullscreen"] = ""
 
       # Default Player Settings
       html_options["width"] ||= 560
@@ -43,7 +43,7 @@ module EmbedMedia
       content_tag(:iframe, "", html_options)
     end
 
-    def vimeo_embed video_id, html_options
+    def vimeo_embed(video_id, html_options)
       html_options["src"] = "https://player.vimeo.com/video/#{video_id}"
       html_options["frameborder"] = 0
       html_options["webkitallowfullscreen"] = true
@@ -57,7 +57,7 @@ module EmbedMedia
       content_tag(:iframe, "", html_options)
     end
 
-    def vine_embed video_id, html_options
+    def vine_embed(video_id, html_options)
       html_options["src"] = "https://vine.co/v/#{video_id}/embed/simple"
       html_options["frameborder"] = 0
 
@@ -68,7 +68,7 @@ module EmbedMedia
       content_tag(:iframe, "", html_options) + javascript_include_tag("https://platform.vine.co/static/scripts/embed.js")
     end
 
-    def niconico_embed video_id, html_options
+    def niconico_embed(video_id, html_options)
       html_options["src"] = "http://ext.nicovideo.jp/thumb/#{video_id}"
       html_options["class"] = "nicovideo"
       html_options["frameborder"] = 0

@@ -1,3 +1,5 @@
+require "embed_media/media_helper"
+
 module EmbedMedia
   class Engine < ::Rails::Engine
 
